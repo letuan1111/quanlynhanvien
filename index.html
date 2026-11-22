@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b38">
+  <meta name="description" content="HRM Workspace - Bảng điều khiển quản lý nhân sự, chấm công, nghỉ phép và bảng lương.">
+  <title>HRM Workspace | Quản lý nhân viên</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Điều hướng chính">
+      <a class="brand" href="#dashboard">
+        <span class="brand-mark">◆</span>
+        <span><strong>HRM Workspace</strong><small>Employee Management</small></span>
+      </a>
+      <div class="nav-label">KHÔNG GIAN LÀM VIỆC</div>
+      <nav class="nav" id="nav">
+        <button data-page="dashboard" class="nav-item active"><span class="nav-icon">▦</span> Tổng quan</button>
+        <button data-page="employees" class="nav-item"><span class="nav-icon">♙</span> Nhân viên</button>
+        <button data-page="departments" class="nav-item"><span class="nav-icon">▥</span> Phòng ban</button>
+        <button data-page="attendance" class="nav-item"><span class="nav-icon">▣</span> Chấm công</button>
+        <button data-page="leaves" class="nav-item"><span class="nav-icon">◷</span> Nghỉ phép</button>
+        <button data-page="payroll" class="nav-item"><span class="nav-icon">▤</span> Bảng lương</button>
+        <button data-page="reports" class="nav-item"><span class="nav-icon">▨</span> Báo cáo</button>
+      </nav>
+      <div class="nav-label second">HỆ THỐNG</div>
+      <nav class="nav"><button data-page="settings" class="nav-item"><span class="nav-icon">⚙</span> Cài đặt & dữ liệu</button></nav>
+      <div class="sidebar-footer">
+        <div class="footer-orb">i</div>
+        <div><b>Bản demo trên GitHub Pages</b><small>Dữ liệu chỉ lưu trong trình duyệt.</small></div>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="top-left">
+          <button id="menuBtn" class="icon-button mobile-toggle" type="button" aria-label="Mở menu">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="sep">/</span><b id="pageTitle">Tổng quan</b></div>
+        </div>
+        <div class="top-right">
+          <span class="device-indicator"><span class="status-dot"></span> Lưu trên thiết bị</span>
+          <span class="top-date" id="topDate"></span>
+          <span class="avatar">AD</span>
+        </div>
+      </header>
+      <main id="main" class="main" tabindex="-1"></main>
+      <footer class="footer">HRM Workspace · Phiên bản demo không có đăng nhập hay cơ sở dữ liệu máy chủ.</footer>
+    </div>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input id="importFile" type="file" accept=".json,application/json" hidden>
+  <script src="app.js" defer></script>
+</body>
+</html>
